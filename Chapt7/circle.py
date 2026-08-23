@@ -18,3 +18,5 @@ c1 = Circle()
 print(c1.radius)
 print(c1.getPerimeter())
 print(c1.getArea())
+
+print(f'Area is {Circle(5).getArea()}')
