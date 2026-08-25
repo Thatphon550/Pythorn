@@ -21,11 +21,13 @@ class QuadraticEquation:
     def getRoot1(self):
         if (self.__b ** 2) - (4 * self.__a * self.__c) < 0:
             return 0
+        
         return ( - self.__b + math.sqrt((self.__b ** 2) - (4 * self.__a * self.__c))) / (2 * self.__a)
     
     def getRoot2(self):
         if (self.__b ** 2) - (4 * self.__a * self.__c) < 0:
             return 0
+        
         return ( - self.__b - math.sqrt((self.__b ** 2) - (4 * self.__a * self.__c))) / (2 * self.__a)
     
     
