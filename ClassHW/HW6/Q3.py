@@ -124,11 +124,7 @@ def getText(num):
     
 
 def main():
-    # while True:
-    #     num = int(input("Enter a number: "))
-    #     print(getText(num))
-    
-    for num in range(1, 1000):
-        print(getText(num))
+    number = eval(input("Enter a number: "))
+    print(getText(number))
     
 main()

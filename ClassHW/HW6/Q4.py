@@ -113,9 +113,9 @@ if count1 >= 1 or count2 >= 1 or count5 >= 1 or count10 >= 1 or count20 >= 1 or 
                         print(f"    {count20} 20-Baht notes")
                             
                 if count10 == 1:
-                    print(f"    {count10} 10-Baht coins")
+                    print(f"    {count10} 10-Baht coin")
                 elif count10 > 1:
-                    print(f"    {count10} 10-Baht coints")
+                    print(f"    {count10} 10-Baht coins")
                         
             if count5 == 1:
                 print(f"    {count5} 5-Baht coin")
