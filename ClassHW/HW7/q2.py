@@ -138,17 +138,18 @@ class Poly:
     
         
 def main():
-    # poly1 = Poly((3, -4, -5, 2))
-    # poly1.printPoly()
-    # poly1.diff().printPoly()
-    # poly2 = Poly((-4, -1, 1))
-    # poly2.printPoly()
-    # poly3 = poly1.add(poly2)
-    # poly3.printPoly()
-    # poly3.diff().printPoly()
-    poly4 = Poly((1, 0, -2, 6, 2, 6, 1, 6, 23, 6, 6, 6, 6, -1, 6, 5, -10, -4, 1, 6, 6, 6, 6, 6, 6, 6, 6))
-    poly5 = Poly((-5, 2, 5, 0, 1, 52, -9))
-    poly4.multiply(poly5).power(20).integrate().integrate().multiply(poly5.diff()).power(2).printPoly()
 
+    p = Poly((1, 0, -2))
+    p.printPoly()
+    
+    q = p.power(2)
+    q.printPoly()
+    
+    p.evalPoly(3)
+    
+    r = p.add(q)
+    r.printPoly()
+
+    r.diff().printPoly()
     
 main()

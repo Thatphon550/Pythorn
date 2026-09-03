@@ -85,10 +85,9 @@ class Clock:
 
                 
 def main():
-    currentTime = Clock(0, 0, 0)
-    while True:
-        currentTime.getTime()
-        time.sleep(1)
-        currentTime.tick()
+    currentTime = Clock(23, 59, 59)
+    currentTime.getTime()
+    currentTime.tick()
+    currentTime.getTime()
     
 main()

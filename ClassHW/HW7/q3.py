@@ -36,3 +36,10 @@ class LinearEquation:
     def getY(self):
         return ((self.__a * self.__f) - (self.__e * self.__c)) / ((self.__a * self.__d) - (self.__b * self.__c))
 
+
+def main():
+    eqn1 = LinearEquation(-3, 1, 0, 4, 8, -5)
+    print(eqn1.getX())
+    print(eqn1.getY())
+    
+main()
