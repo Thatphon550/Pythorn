@@ -47,4 +47,5 @@ def main():
         print(f"The value of x is: {eqn1.getX()}")
         print(f"The value of y is: {eqn1.getY()}")
         
-main()
+if __name__ == "__main__":
+    main()
