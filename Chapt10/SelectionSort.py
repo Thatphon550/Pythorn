@@ -3,8 +3,8 @@ def selectionSort(lst):
         currentMin = lst[i]
         currentMinIndex = i
 
-        for j in range(i + 1, len(lst)): #to reverse, simply switch the sign
-            if currentMin > lst[j]:
+        for j in range(i + 1, len(lst)):
+            if currentMin > lst[j]: # To reverse, simply switch the sign
                 currentMin = lst[j]
                 currentMinIndex = j
 

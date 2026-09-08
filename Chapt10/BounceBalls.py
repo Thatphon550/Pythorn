@@ -87,3 +87,4 @@ class BounceBalls:
                                 ball.y + ball.radius, fill=ball.color, tags="ball")
         
 BounceBalls()
+
