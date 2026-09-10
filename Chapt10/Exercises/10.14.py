@@ -1,19 +1,17 @@
-def selectionSort(lst):
-
-
-    for i in range(len(lst) - 2, 0, -1):
+def reverseSelectionSort(lst):
+    for i in range(len(lst) -1, 0, -1):
         currentMax = lst[i]
         currentMaxIndex = i
 
-        for j in range(len(lst) - 1, i + 1, -1):
-            if lst[j] > currentMax:
+        for j in range(i - 1, -1, -1):
+            if currentMax < lst[j]:
                 currentMax = lst[j]
                 currentMaxIndex = j
 
         if currentMaxIndex != i:
-            lst[currentMaxIndex] = lst[len(lst) - 1]
-            lst[len(lst) - 1] = currentMax
+            lst[currentMaxIndex] = lst[i]
+            lst[i] = currentMax
 
 a = [1, 3, 1, 2, 3, 4, 6, 9]
-selectionSort(a)
+reverseSelectionSort(a)
 print(a)
