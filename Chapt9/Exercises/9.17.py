@@ -11,23 +11,35 @@ class RacingCar:
         self.refX = 0
         self.refY = 100
 
-        self.drawCar()
+        self.dx = 5
 
-        self.canvas.bind("<Key>", self.move)
-        self.canvas.focus_set()
+        self.drawCar()
+        self.animate()
+        
 
         window.mainloop()
 
 
-    def move(self, event):
+    def setSpeed(self, event):
         if event.keycode == 37:
-            self.refX -= 10
-            self.canvas.delete("car") 
-            self.drawCar()   
+            self.dx -= 1
         elif event.keycode == 39:
-            self.refX += 10
-            self.canvas.delete("car") 
-            self.drawCar()   
+            self.dx += 1
+    def animate(self):
+        while True:
+            self.canvas.bind("<Key>", self.setSpeed)
+            self.canvas.focus_set()
+
+            self.refX += self.dx
+            self.canvas.move("car", self.dx, 0)
+            self.canvas.after(5)
+            self.canvas.update()
+            if self.refX > 270:
+                self.canvas.delete("car")
+                self.refX = -40
+                self.drawCar()
+
+    
 
     def drawCar(self):
         self.canvas.create_oval(self.refX + 10, self.refY - 10, self.refX + 20, self.refY, tags="car", fill="black")

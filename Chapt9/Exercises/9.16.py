@@ -1,4 +1,5 @@
 from tkinter import *
+import time
 
 class Fan:
     def __init__(self):
@@ -25,6 +26,7 @@ class Fan:
 
             self.start += 5
             self.canvas.after(self.time)
+            
             
             
             self.canvas.update()
