@@ -1,5 +1,4 @@
 from tkinter import *
-import time
 
 class Fan:
     def __init__(self):
