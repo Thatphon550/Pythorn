@@ -124,3 +124,35 @@
 #     print(x == y)
 
 # main()
+
+#========================================
+
+# class Person:
+#     def getInfo(self):
+#         return "Person"
+
+#     def printPerson(self):
+#         print(self.getInfo())
+
+# class Student(Person):
+#     def getInfo(self):
+#         return "Student"
+
+# Person().printPerson()
+# Student().printPerson()
+
+#========================================
+
+class Person:
+    def __getInfo(self):
+        return "Person"
+
+    def printPerson(self):
+        print(self.__getInfo())
+
+class Student(Person):
+    def __getInfo(self):
+        return "Student"
+
+Person().printPerson()
+Student().printPerson()
