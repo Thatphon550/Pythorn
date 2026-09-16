@@ -14,7 +14,7 @@ class GeometricObject:
 
     def setFilled(self, filled):
         self.__filled = filled
-
+    #g
     def __str__(self):
         return "color:" + self.__color + " and filled: " + str(self.__filled)
 
@@ -26,7 +26,7 @@ class Triangle(GeometricObject):
         self.__side3 = side3
 
     def getSide1(self):
-        return self.__side1 
+        return self.__side1
 
     def setSide1(self, side1):
         self.__side1 = side1

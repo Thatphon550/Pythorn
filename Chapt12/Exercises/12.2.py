@@ -24,5 +24,3 @@ def main():
     print(f"The location of the largest element is {a} at ({b[0]}, {b[1]})")
 
 main()
-
-
