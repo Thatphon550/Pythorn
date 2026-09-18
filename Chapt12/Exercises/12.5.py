@@ -7,6 +7,10 @@ class TicTacToe(Canvas):
 
         self.over = False
         self.pos = [[None for _ in range(3)] for _ in range(3)]
+        for x in range(100, 301, 100):
+            self.create_line(x, 0, x, 300)
+        for y in range(100, 301, 100):
+            self.create_line(0, y, 300, y)
         self.player = 1
         self.bind("<Button-1>", self.place)
 
