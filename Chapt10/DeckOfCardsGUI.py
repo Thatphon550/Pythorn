@@ -8,7 +8,7 @@ class DeckOfCardsGUI:
 
         self.imageList = []
         for i in range(1, 53):
-            self.imageList.append(PhotoImage(file= "image/card/" + str(i) + ".gif"))
+            self.imageList.append(PhotoImage(file= "Exercises/card/" + str(i) + ".gif"))
 
         frame = Frame(window)
         frame.pack()
@@ -26,3 +26,5 @@ class DeckOfCardsGUI:
         random.shuffle(self.imageList)
         for i in range(4):
             self.labelList[i]["image"] = self.imageList[i]
+
+DeckOfCardsGUI()
