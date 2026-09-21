@@ -5,7 +5,8 @@ class ConnectFour:
         self.red_win = False
         self.yellow_win = False
 
-        while not self.red_win or self.yellow_win:
+
+        while not (self.red_win or self.yellow_win):
             self.turn()
 
         if self.red_win:
@@ -13,6 +14,7 @@ class ConnectFour:
         elif self.yellow_win:
             print("Yellow player wins!")
 
+        self.print_board()
 
     def turn(self):
         c = int(input(f"\nDrop a {"red" if self.player == 1 else "yellow"}" +
@@ -73,6 +75,7 @@ class ConnectFour:
                         return True
                 else:
                     consecutive = 1
+        return False
 
     def check_col(self):
         for col in range(len(self.board[0])):
@@ -84,6 +87,8 @@ class ConnectFour:
                         return True
                 else:
                     consecutive = 1
+        return False
+
 
     def check_rightdown_leftup(self):
         for row in range(len(self.board)):
@@ -98,6 +103,7 @@ class ConnectFour:
                     else:
                         consecutive = 1
                     r, c = r - 1, c - 1
+        return False
 
     def check_leftdown_rightup(self):
         for row in range(len(self.board)):
@@ -112,5 +118,6 @@ class ConnectFour:
                     else:
                         consecutive = 1
                     r, c = r - 1, c + 1
+        return False
 
 ConnectFour()
