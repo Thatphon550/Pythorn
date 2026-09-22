@@ -52,7 +52,7 @@ class Display:
         window = Tk()
         window.title("Racing Cars")
 
-        a = RacingCars(window, 400, 220, 4)
+        a = RacingCars(window, 400, 220, 3)
         a.pack()
 
         window.mainloop()
