@@ -7,7 +7,7 @@ class ConnectFour:
 
     def place(self, col):
         if self.red_win or self.yellow_win:
-            return 
+            return
         if self.board[0][col]:
             return False
         for row in range(len(self.board) - 1):
