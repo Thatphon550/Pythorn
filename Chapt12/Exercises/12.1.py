@@ -1,3 +1,19 @@
+class TriangleError(RuntimeError):
+    def __init__(self, side1, side2, side3):
+        super().__init__()
+        self.__side1 = side1
+        self.__side2 = side2
+        self.__side3 = side3
+
+    def get_side1(self):
+        return self.__side1
+
+    def get_side2(self):
+        return self.__side2
+
+    def get_side3(self):
+        return self.__side3
+
 class GeometricObject:
     def __init__(self, color = "green", filled = True):
         self.__color = color
@@ -14,13 +30,15 @@ class GeometricObject:
 
     def setFilled(self, filled):
         self.__filled = filled
-    #g
+
     def __str__(self):
         return "color:" + self.__color + " and filled: " + str(self.__filled)
 
 class Triangle(GeometricObject):
     def __init__(self, side1=1.0, side2=1.0, side3=1.0):
         super().__init__()
+        if side1 + side2 < side3 or side1 + side3 < side2 or side2 + side3 < side1:
+            raise TriangleError(side1, side2, side3)
         self.__side1 = side1
         self.__side2 = side2
         self.__side3 = side3
@@ -53,4 +71,7 @@ class Triangle(GeometricObject):
     def __str__(self):
         return f"Triangle: side1 = {self.__side1} side2 = {self.__side2} side3 = {self.__side3}"
 
-print(Triangle())
+try:
+    Triangle(1, 2, 4)
+except TriangleError as t:
+    print(f"Cannot form triangle with {t.get_side1()}, {t.get_side2()}, {t.get_side3()}")
