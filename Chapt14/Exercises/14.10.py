@@ -55,13 +55,19 @@ class HangMan:
     def draw_hangman(self):
         count = len(self.missed_letters)
         if count == 1:
-            self.canvas.create_oval(
-                175, 51, 225, 100
-            )
+            self.canvas.create_line(200, 25, 200, 50)
         elif count == 2:
-            self.canvas.create_line(
-                180, 90, 140, 130
-            )
+            self.canvas.create_oval(175, 51, 225, 100)
+        elif count == 3:
+            self.canvas.create_line(180, 90, 140, 130)
+        elif count == 4:
+            self.canvas.create_line(220, 90, 260, 130)
+        elif count == 5:
+            self.canvas.create_line(200, 100, 200, 170)
+        elif count == 6:
+            self.canvas.create_line(200, 170, 160, 210)
+        elif count == 7:
+            self.canvas.create_line(200, 170, 240, 210)
     def check_win(self):
         for ch in self.answer:
             if not ch:
@@ -115,7 +121,7 @@ class HangMan:
             )
         self.canvas.create_line(75, 320, 75, 25, tags="post")
         self.canvas.create_line(75, 25, 200, 25, tags="post")
-        self.canvas.create_line(200, 25, 200, 50, tags="post")
+
 
     def draw_word(self):
         self.canvas.delete("text")
