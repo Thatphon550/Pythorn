@@ -15,6 +15,6 @@ def count_helper(chars, ch, index):
 
 
 def main():
-    print(count("python programming", "m"))
+    print(count(["p", "m"], "m"))
 
 main()
