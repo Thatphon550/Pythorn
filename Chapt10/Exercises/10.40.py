@@ -8,7 +8,7 @@ class InsertionSort:
         window = Tk()
         window.title("Insertion Sort Animation")
 
-        self.lst = [i for i in range(1, 2000)]
+        self.lst = [i for i in range(1, 200)]
         random.shuffle(self.lst)
         self.index = 0
         self.width = 1920
@@ -28,7 +28,7 @@ class InsertionSort:
         div = self.width / len(self.lst)
         self.canvas.delete("all")
         for i in range(len(self.lst)):
-            self.canvas.create_rectangle(10 + i * div, 190 - self.lst[i] * 0.08, 10 + (i + 1) * div, 190,
+            self.canvas.create_rectangle(10 + i * div, 190 - self.lst[i] * 0.8, 10 + (i + 1) * div, 190,
                                          fill = "#8C8C8C" if i == self.index - 1 else None, outline="#CDDB91")
             # self.canvas.create_text(10 + (i + 0.5) * div, 182 - self.lst[i],
             #                         text=self.lst[i], font=("Geist Mono", 10))
